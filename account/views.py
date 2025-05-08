@@ -13,6 +13,7 @@ def user_login(request):
         if form.is_valid():
             # Récupère le dictionnaire des données validées et nettoyées.
             cd = form.cleaned_data
+            print(cd)
             user = authenticate(
                 request,
                 username=cd['username'],
